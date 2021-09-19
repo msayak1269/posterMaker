@@ -11,7 +11,7 @@ const Routes = () => {
                 <Route path="/" exact component={Page1}/>
                 <Route path="/page2" exact component={Page2}/>
                 <Route path="/print" exact component={Print}/>
-                <Route path="/pp" exact component={pp}/>
+                {/* <Route path="/pp" exact component={pp}/> */}
             </Switch>
         </Router>
     );
