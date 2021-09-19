@@ -3,7 +3,7 @@ import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import Page1 from './core/Page1';
 import Page2 from './core/Page2';
 import Print from './core/Print';
-import pp from './core/pp';
+// import pp from './core/pp';
 const Routes = () => {
     return ( 
         <Router>
