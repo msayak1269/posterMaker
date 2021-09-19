@@ -33,17 +33,13 @@ const Page2 = () => {
         >
             <div className="row"
                 style={{
-                    position: "absolute",
-                    left: "50%",
-                    top: "50%",
-                    WebkitTransform: "translate(-50%, -50%)",
-                    transform: "translate(-50%, -50%)"
+                    padding:"5%"
                 }}
             >
-                <div className="col-xl-6 d-flex justify-content-center">
+                <div className="col-xl-6 p-4">
                     <div className="card" id="posterCard"
                         style={{
-                            height: "50vh",
+                            height: "55vh",
                             width: "37vh",
                             border: "10px solid",
                             borderColor: "red"
@@ -80,8 +76,8 @@ const Page2 = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-xl-6 text-white p-4">
-                    <h6>Customize your Poster</h6><br />
+                <div className="col-xl-6 text-white">
+                    <h5 className="text-center">Customize your Poster</h5><br />
                     <form>
                         <div className="form-group">
                             <input type="text" className="form-control" placeholder="Your Name" onChange={handleName} required />
@@ -94,39 +90,39 @@ const Page2 = () => {
                             </select>
                         </div>
                         <div className="form-group">
-                            <label for="exampleInputEmail1">Pick a Colour</label>
+                            <label>Pick a Colour</label>
                             <input type="color" className="form-control" value="red" onChange={handleColor} required />
                         </div>
                         <div className="form-group">
-                            <label for="exampleInputEmail1">Pick a Photo</label>
+                            <label>Pick a Photo</label>
                             <input type="file" className="form-control" onChange={handleImage} required />
                         </div>
                         <div className="form-group">
-                            <label for="exampleInputEmail1">Your messege</label>
-                            <input type="text" className="form-control" onChange={handleMsg} required />
+                            <label>Your messege (0-100 character)</label>
+                            <textarea name="" id="" cols="39" rows="5" onChange={handleMsg}></textarea>
                         </div>
                     </form>
                 </div>
-                <Link to={{
-                    pathname: "/print",
-                    dataProps: {
-                        name, specialization, msg, image, borderColor
-                    }
-                }}
+                <div className="container text-center p-3">
+                    <Link to={{
+                        pathname: "/print",
+                        dataProps: {
+                            name, specialization, msg, image, borderColor
+                        }
+                    }}
 
-                >
-                    <div className="container text-center">
+                    >
+
                         <div className="btn text-white btn-lg"
                             style={{
                                 backgroundColor: "#66DE93",
-                                borderRadius: "50px",
-                                alignSelf:"center"
+                                borderRadius: "50px"
                             }}
                         >
                             Create Here
                     </div>
-                    </div>
-                </Link>
+                    </Link>
+                </div>
             </div>
         </div>
     );
