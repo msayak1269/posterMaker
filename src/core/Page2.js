@@ -86,19 +86,21 @@ const Page2 = () => {
                             <select name="" id="" className="form-control" onChange={handleSpecialization} required>
                                 <option value="" disabled selected hidden>Specialization</option>
                                 <option value="Cardiologist">Cardiologist</option>
-                                <option value="General">General</option>
+                                <option value="General">Consultant Physician</option>
                             </select>
-                        </div>
-                        <div className="form-group">
-                            <label>Pick a Colour</label>
-                            <input type="color" className="form-control" value="red" onChange={handleColor} required />
                         </div>
                         <div className="form-group">
                             <label>Pick a Photo</label>
                             <input type="file" className="form-control" onChange={handleImage} required />
                         </div>
+                        
+                        <div className="form-group">
+                            <label>Pick a Colour</label>
+                            <input type="color" className="form-control" value="red" onChange={handleColor} required />
+                        </div>
                         <div className="form-group">
                             <label>Your messege (0-100 character)</label>
+                            <br />
                             <textarea name="" id="" cols="39" rows="5" onChange={handleMsg}></textarea>
                         </div>
                     </form>
